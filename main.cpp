@@ -2,20 +2,13 @@
 #include "bigint.h"
 using namespace std;
 
-float fac(float n)
-{
-	if(n < 3)
-		return n;
-	else
-		return n * fac(n-1);
-}
-
 int main()
 {
 	freopen("inputcpp.txt", "r", stdin);
 	freopen("outputcpp.txt", "w", stdout);
-	float a;
-	cin >> a;
-	cout << fac(a);
+	bigint a, b;
+	cin >> a.n >> b.n;
+	bigint c(a+b);
+	cout << c;
 	return 0;
 }
