@@ -1,7 +1,7 @@
 /*
  * bigint: a cpp header file for
- *		   numbers of arbitrary
- *		   length.
+ *	   numbers of arbitrary
+ *	   length.
  *
  * Creator: @shardic1
  */
