@@ -65,6 +65,12 @@ public:
 
 	/* overloading operators */
 
+	friend std::istream &operator >> (std::istream &input, bigint &op)
+	{
+		input >> op.n;
+		return input;
+	}
+
 	friend std::ostream &operator << (std::ostream &output, const bigint &op)
 	{
 		output << op.n;
@@ -84,7 +90,7 @@ public:
 		bool first_is_longer = false, both_are_equal = false;
 		auto i = this -> n.begin(), j = op.n.begin();
 
-		for(; i != this -> n.end(), j != op.n.end(); i++, j++);
+		for(; i != this -> n.end() and j != op.n.end(); i++, j++);
 
 		if(i == this -> n.end())
 		{
@@ -137,12 +143,11 @@ public:
 			}
 
 			*a_itr = (char)('0' + sum);
-			// std::cerr << *a_itr << '\n';
 
 		} while(a_itr != a.n.begin() && b_itr != b.n.begin());
 
 		// needs to be optimised for unnecessary carry checks
-		if(first_is_longer)
+		if(!both_are_equal)
 		{
 			do
 			{
@@ -171,42 +176,13 @@ public:
 
 		}
 
-		// needs to be optimised for unnecessary carry checks
-		else if(!both_are_equal)
+		if(carry > 0)
 		{
-			do
-			{
-				b_itr -= 1;
-
-				int sum = (*b_itr - '0') + carry;
-
-				if(sum > 9)
-				{
-					int x = sum % 10;
-					sum /= 10;
-					carry = sum;
-					sum = x;
-				}
-
-				// optimise here: break after this and copy 
-				// all remaining values
-				else
-				{
-					carry = 0;
-				}
-
-				*b_itr = (char)('0' + sum);
-
-			} while(b_itr != b.n.begin());
-
+			char c = '0' + carry;
+			a.n.insert(a.n.begin(), c);
 		}
 
-		else
-		{
-			// do nothing
-		}
-
-		std::cerr << a << '\n';
+		// std::cerr << a << '\n';
 		return (bigint) a;
 		
 	}
