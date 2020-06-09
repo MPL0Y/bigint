@@ -1,12 +1,12 @@
 <p align="center"><img width=12.5% src="https://github.com/shardic1/bigint/blob/master/media/inf.jpg"></p>
 <p align="center"><img width=60% src="https://github.com/shardic1/bigint/blob/master/media/bigint.png"></p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  ![Python](https://img.shields.io/badge/C++-14-red.svg)
+<p align="center">
+![C++](https://img.shields.io/badge/C++-14-red.svg)
 [![GitHub Issues](https://img.shields.io/github/issues/shardic1/bigint/media/bigint.png)](https://github.com/shardic1/bigint/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
+</p>
 
 ## Basic Overview
 
