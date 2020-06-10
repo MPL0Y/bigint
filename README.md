@@ -100,4 +100,4 @@ bigint c = a+b;
 
 > **If you think it's simple, then you have misunderstood the problem.**
 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Bjarne Stroustrup
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Bjarne Stroustrup
