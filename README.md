@@ -1,5 +1,5 @@
-<p align="center"><img width=20% src="https://github.com/shardic1/bigint/blob/master/media/inf.jpg"></p>
-<p align="center"><img width=40% src="https://github.com/shardic1/bigint/blob/master/media/bigint.png"></p>
+<p align="center"><img width=20% src="https://github.com/MPL0Y/bigint/blob/master/media/inf.jpg"></p>
+<p align="center"><img width=40% src="https://github.com/MPL0Y/bigint/blob/master/media/bigint.png"></p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   ![Python](https://img.shields.io/badge/C++-14-red.svg)
@@ -21,7 +21,7 @@
 
 • Clone the repository in your desired folder by
 ```bash
-git clone https://github.com/shardic1/bigint.git
+git clone https://github.com/MPL0Y/bigint.git
 ```
 or download the .zip file
 
@@ -31,7 +31,7 @@ or download the .zip file
 
 • Clone the repository in your desired folder by
 ```bash
-git clone https://github.com/shardic1/bigint.git
+git clone https://github.com/MPL0Y/bigint.git
 ```
 or download the .zip file
 
