@@ -3,7 +3,7 @@
  *	   numbers of arbitrary
  *	   length.
  *
- * Creator: @shardic1
+ * Creator: @MPL0Y
  */
 
 #ifndef BIG_INT
@@ -18,44 +18,44 @@
 class bigint
 {
 
-public:
+  public:
 
-	/* initial number as a string */
+	/* Initial number as a string */
 	std::string n = "";
 
-	/* constructors */
+	/* Constructors */
 
-	// default constructor with initial value as 0
+	// Default constructor with initial value as 0
 	bigint()
 	{
 		this -> n = "0";
 	}
 
-	// constructor for all data types passed
+	// Constructor for all data types passed
 	template <typename T>
 	bigint(T a)
 	{
 		//constructor for bigint passed
-		if(std::is_same<T, bigint>::value)
+		if (std::is_same<T, bigint>::value)
 		{
 			this -> n = a.n;
 		}
 
-		// check if passed argument is a float
-		else if(std::is_same<T, float>::value or std::is_same<T, double>::value)
+		// Check if passed argument is a float
+		else if (std::is_same<T, float>::value or std::is_same<T, double>::value)
 		{
-			// type-caste to lose fractional part
+			// Type-caste to lose fractional part
 			this -> n = std::to_string((long long) a);
 		}
 
-		// straight cast for integers
+		// Straight cast for integers
 		else
 		{
 			this -> n = std::to_string(a);
 		}
 	}
 
-	// constructor for initialising 'n' with a mod b (a % b)
+	// Constructor for initialising 'n' with a mod b (a % b)
 	template <typename T>
 	bigint(T a, T b)
 	{
@@ -63,7 +63,7 @@ public:
 		this -> n = std::to_string(c);
 	}
 
-	/* overloading operators */
+	/* Cverloading operators */
 
 	friend std::istream &operator >> (std::istream &input, bigint &op)
 	{
@@ -86,15 +86,15 @@ public:
 	{
 		bigint a, b;
 
-		// check the longer string
+		// Check the longer string
 		bool first_is_longer = false, both_are_equal = false;
 		auto i = this -> n.begin(), j = op.n.begin();
 
-		for(; i != this -> n.end() and j != op.n.end(); i++, j++);
+		for (; i != this -> n.end() and j != op.n.end(); i++, j++);
 
-		if(i == this -> n.end())
+		if (i == this -> n.end())
 		{
-			if(j == op.n.end())
+			if (j == op.n.end())
 			{
 				both_are_equal = true;
 			}
@@ -107,8 +107,8 @@ public:
 			first_is_longer = true;
 		}
 
-		// assign longer value to 'a'
-		if(first_is_longer)
+		// Assign longer value to 'a'
+		if (first_is_longer)
 		{
 			a.n = this -> n, b.n = op.n;
 		}
@@ -129,7 +129,7 @@ public:
 
 			int sum = (*a_itr - '0') + (*b_itr - '0') + carry;
 
-			if(sum > 9)
+			if (sum > 9)
 			{
 				int x = sum % 10;
 				sum /= 10;
@@ -144,10 +144,10 @@ public:
 
 			*a_itr = (char)('0' + sum);
 
-		} while(a_itr != a.n.begin() && b_itr != b.n.begin());
+		} while (a_itr != a.n.begin() && b_itr != b.n.begin());
 
-		// needs to be optimised for unnecessary carry checks
-		if(!both_are_equal)
+		// Needs to be optimised for unnecessary carry checks
+		if (!both_are_equal)
 		{
 			do
 			{
@@ -155,7 +155,7 @@ public:
 
 				int sum = (*a_itr - '0') + carry;
 
-				if(sum > 9)
+				if (sum > 9)
 				{
 					int x = sum % 10;
 					sum /= 10;
@@ -163,7 +163,7 @@ public:
 					sum = x;
 				}
 
-				// optimise here: break after this and copy 
+				// Optimise here: break after this and copy 
 				// all remaining values
 				else
 				{
@@ -172,23 +172,20 @@ public:
 
 				*a_itr = (char)('0' + sum);
 
-			} while(a_itr != a.n.begin());
+			} while (a_itr != a.n.begin());
 
 		}
 
-		if(carry > 0)
+		if (carry > 0)
 		{
 			char c = '0' + carry;
 			a.n.insert(a.n.begin(), c);
 		}
 
-		// std::cerr << a << '\n';
 		return (bigint) a;
 		
 	}
 
 };
-
-// gg
 
 #endif
