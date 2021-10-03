@@ -14,7 +14,7 @@
 #include <cmath>
 #include <type_traits>
 
-/* main class definition */
+/* Main class definition */
 class bigint
 {
 
