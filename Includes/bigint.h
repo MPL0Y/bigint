@@ -98,8 +98,6 @@ class bigint
 			{
 				both_are_equal = true;
 			}
-
-			// 'second being longer' case already initialised
 		}
 
 		else
@@ -187,5 +185,7 @@ class bigint
 	}
 
 };
+
+// TechCom was here
 
 #endif
